@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations ke Gyan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: beige;
+            border: solid 5px black;
+        }
+
+        .box {
+            width: 350px;
+            height: 80px;
+            background-color: rgb(199, 136, 187);
+            border-radius: 50px;
+            margin: 10px;
+            padding: 10px;
+            border: solid 2px rgb(212, 35, 35);
+            position: relative;
+            animation-name: rightMovement;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            /* animation-timing-function: linear; */
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            /* animation: rightMovement 5s  -2s infinite; */
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes rightMovement {
+            from {
+                top: 0;
+                left: 0;
+            }
+
+            to {
+                top: 0;
+                left: 1300px;
+            }
+
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+
+        }
+
+        .box2 {
+            width: 350px;
+            height: 80px;
+            background-color: rgb(199, 136, 187);
+            border-radius: 50px;
+            margin: 10px;
+            padding: 10px;
+            border: solid 2px rgb(212, 35, 35);
+            position: relative;
+            animation-name: leftMovement;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes leftMovement {
+            from {
+                top: 600px;
+                left: 1350px;
+            }
+
+            to {
+                top: 600px;
+                left: 0px;
+            }
+
+            from {
+                background-color: rgb(29, 148, 69);
+            }
+
+            to {
+                background-color: rgb(172, 32, 34);
+            }
+
+        }
+
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(199, 136, 187);
+            border-radius: 100px;
+            margin: 10px;
+            padding: 10px;
+            border: solid 2px rgb(212, 35, 35);
+            position: relative;
+            /* animation-name: circle;
+            animation-duration: 5s;
+           animation-iteration-count: infinite;
+            animation-delay: 2s;
+           animation-direction: alternate;
+           animation-timing-function:ease-in-out;
+            animation-fill-mode: forwards;  */
+            animation: 10s ease-in-out 0s infinite alternate-reverse none  circle;
+        }
+
+        @keyframes circle {
+            0% {
+                top: 1%;
+                left: 5%;
+
+            }
+
+            30% {
+                top: 5%;
+                left: 90%;
+            }
+
+            60% {
+                top: 0%;
+                left: 10%;
+            }
+
+            100% {
+                top: 75%;
+                left: 90%;
+            }
+
+            from {
+                background-color: rgb(49, 139, 10);
+            }
+
+            to {
+                background-color: rgb(172, 32, 34);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Hello ji Ashutosh!</h1>
+        </div>
+        <div class="circle">
+            <h1>Hi!</h1>
+        </div>
+        <div class="box2">
+            <h1>Thanks!</h1>
+        </div>
+    </div>
+</body>
+
+</html>
